@@ -1,0 +1,96 @@
+$hover-transition: 0.15s ease-in-out;
+$backup-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$body-font-name: "Avenir";
+$body-font: $body-font-name, $backup-fonts;
+$header-font-name: "Baskerville Display PT";
+$header-font: $header-font-name, $backup-fonts;
+
+$columns: 12;
+$column-width: 67px;
+$column-gap: 36px;
+$row-gap: 36px;
+
+$columns-mobile: 4;
+$column-width-mobile: 65px;
+$column-gap-mobile: 10px;
+$row-gap-mobile: 10px;
+
+$base-font-size: 17px;
+$base-line-height: 15px;
+
+$base-font-size-mobile: 15px;
+$base-line-height-mobile: 20px;
+
+$width-xs: 320px;
+$width-s: 425px;
+$width-m: 768px;
+$width-l: 1024px;
+$width-xl: 1440px;
+
+$breakpoints: (
+  xs: $width-xs,
+  s: $width-s,
+  m: $width-m,
+  l: $width-l,
+  xl: $width-xl
+);
+
+$heading-font-sizes: (
+  h1: 57px,
+  h2: 43px,
+  h3: 22px,
+  h4: 20px,
+  h5: 18px,
+  h6: 16px,
+);
+
+$heading-line-heights: (
+  h1: 65px,
+  h2: 57px,
+  h3: 30px,
+  h4: 26px,
+  h5: 23px,
+  h6: 21px,
+);
+
+$heading-font-sizes-mobile: (
+  h1: 34px,
+  h2: 24px,
+  h3: 19px,
+  h4: 18px,
+  h5: 16px,
+  h6: 15px,
+);
+
+$heading-line-heights-mobile: (
+  h1: 41px,
+  h2: 29px,
+  h3: 26px,
+  h4: 24px,
+  h5: 22px,
+  h6: 20px,
+);
+
+// Do not touch - convert px to rems
+$base-line-height: $base-line-height / $base-font-size;
+$base-line-height-mobile: $base-line-height-mobile / $base-font-size-mobile;
+
+@for $i from 1 through 6 {
+  $heading-line-heights: map-merge(
+    $heading-line-heights,
+    (h#{$i}: map-get($heading-line-heights, h#{$i}) / map-get($heading-font-sizes, h#{$i}))
+  );
+  $heading-font-sizes: map-merge(
+    $heading-font-sizes,
+    (h#{$i}: map-get($heading-font-sizes, h#{$i}) / $base-font-size * 1rem)
+  );
+  $heading-line-heights-mobile: map-merge(
+    $heading-line-heights-mobile,
+    (h#{$i}: map-get($heading-line-heights-mobile, h#{$i}) / map-get($heading-font-sizes-mobile, h#{$i}))
+  );
+  $heading-font-sizes-mobile: map-merge(
+    $heading-font-sizes-mobile,
+    (h#{$i}: map-get($heading-font-sizes-mobile, h#{$i}) / $base-font-size-mobile * 1rem)
+  );
+}
