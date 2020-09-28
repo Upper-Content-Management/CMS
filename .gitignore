@@ -1,0 +1,33 @@
+# Build directory
+wp-content/themes/canberra/dist/
+
+# Build folder
+dist
+
+# dotenv environment variables file
+.env
+
+# Apache config
+.htaccess
+
+### WordPress ###
+
+# Config files
+wp-config.php
+wp-config-*.php
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/languages/
+
+### Composer ###
+composer.phar
+/vendor/
+
+### Node ###
+# Dependency directories
+node_modules/
