@@ -1,6 +1,13 @@
-import '../scss/style.scss';
-//import Example from '../../components/global/example';
+import '../scss/style.scss'
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Example()
-});
+
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault()
+      const modal = document.querySelector(e.currentTarget.getAttribute('href'))
+      // Toggle modal
+
+    })
+  })
+})

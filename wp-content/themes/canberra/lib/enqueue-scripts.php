@@ -6,7 +6,7 @@ function enqueue_from_manifest() {
     $str = file_get_contents($path);
     $json = json_decode($str, true);
     wp_enqueue_style('main.css', get_template_directory_uri() . '/dist/' . $json['main.css']);
-    wp_enqueue_script('main.js', get_template_directory_uri() . '/dist/' . $json['main.js']);
+    wp_enqueue_script('main.js', get_template_directory_uri() . '/dist/' . $json['main.js'], array('jquery'));
   }
 }
 add_action('wp_enqueue_scripts', 'enqueue_from_manifest');

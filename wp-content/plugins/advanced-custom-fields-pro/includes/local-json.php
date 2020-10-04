@@ -203,10 +203,17 @@ class ACF_Local_JSON {
 	 * @return	bool
 	 */
 	public function save_file( $key, $field_group ) {
-		$path = acf_get_setting( 'save_json' );
-		$file = untrailingslashit( $path ) . '/' . $key . '.json';
-		if( !is_writable($path) ) {
-			return false;
+		
+		// Determine save location.
+		if( isset($this->files[ $key ]) ) {
+			$file = $this->files[ $key ];
+		} else {
+			$path = untrailingslashit( acf_get_setting( 'save_json' ) );
+			if( is_writable($path) ) {
+				$file = "$path/$key.json";
+			} else {
+				return false;
+			}
 		}
 		
 		// Append modified time.
@@ -234,10 +241,8 @@ class ACF_Local_JSON {
 	 * @return	bool True on success.
 	 */
 	public function delete_file( $key ) {
-		$path = acf_get_setting( 'save_json' );
-		$file = untrailingslashit( $path ) . '/' . $key . '.json';
-		if( is_readable($file) ) {
-			unlink( $file );
+		if( isset($this->files[ $key ]) && is_readable($this->files[ $key ]) ) {
+			unlink( $this->files[ $key ] );
 			return true;
 		}
 		return false;

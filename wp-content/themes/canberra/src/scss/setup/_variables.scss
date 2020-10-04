@@ -1,23 +1,37 @@
+$spacing: (
+  0: 0px,
+  1: 8px,
+  2: 16px,
+  3: 24px,
+  4: 48px,
+  5: 80px,
+);
+
+@function spacing($size: 1) {
+  @return map-get($spacing, $size);
+}
+
 $hover-transition: 0.15s ease-in-out;
 $backup-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$body-font-name: "Avenir";
+$body-font-name: halyard-display, sans-serif;
 $body-font: $body-font-name, $backup-fonts;
-$header-font-name: "Baskerville Display PT";
+$body-spacing: spacing(2);
+$header-font-name: halyard-display, sans-serif;
 $header-font: $header-font-name, $backup-fonts;
 
 $columns: 12;
 $column-width: 67px;
 $column-gap: 36px;
-$row-gap: 36px;
+$row-gap: 24px;
 
 $columns-mobile: 4;
 $column-width-mobile: 65px;
 $column-gap-mobile: 10px;
 $row-gap-mobile: 10px;
 
-$base-font-size: 17px;
-$base-line-height: 15px;
+$base-font-size: 16px;
+$base-line-height: 24px;
 
 $base-font-size-mobile: 15px;
 $base-line-height-mobile: 20px;
@@ -33,25 +47,38 @@ $breakpoints: (
   s: $width-s,
   m: $width-m,
   l: $width-l,
-  xl: $width-xl
+  xl: $width-xl,
 );
 
+$container-padding: 30px;
+
+$black: #2b2b2b;
+
 $heading-font-sizes: (
-  h1: 57px,
-  h2: 43px,
-  h3: 22px,
-  h4: 20px,
+  h1: 64px,
+  h2: 45px,
+  h3: 32px,
+  h4: 22px,
   h5: 18px,
-  h6: 16px,
+  h6: 14px,
 );
 
 $heading-line-heights: (
-  h1: 65px,
-  h2: 57px,
-  h3: 30px,
-  h4: 26px,
+  h1: 64px,
+  h2: 48px,
+  h3: 40px,
+  h4: 32px,
   h5: 23px,
-  h6: 21px,
+  h6: 24px,
+);
+
+$heading-margin-bottoms: (
+  h1: spacing(3),
+  h2: spacing(2),
+  h3: spacing(1),
+  h4: spacing(1),
+  h5: spacing(0),
+  h6: spacing(1),
 );
 
 $heading-font-sizes-mobile: (

@@ -1,6 +1,7 @@
 html {
   $browser-default-font-size: 16px;
   font-family: $body-font;
+  font-weight: 300; // Book
   font-size: $base-font-size / $browser-default-font-size * 1em;
   @include mobile {
     font-size: $base-font-size-mobile / $browser-default-font-size * 1em;
@@ -11,19 +12,55 @@ strong {
   font-weight: 700;
 }
 
-a {
-  text-decoration: none;
+p {
+  margin-top: 0;
+  margin-bottom: $body-spacing;
 }
 
 @for $i from 1 through 6 {
   h#{$i},
   .h#{$i} {
-    margin: 0;
     font-size: map-get($heading-font-sizes, h#{$i});
     line-height: map-get($heading-line-heights, h#{$i});
+    margin-bottom: map-get($heading-margin-bottoms, h#{$i});
     @include mobile {
       font-size: map-get($heading-font-sizes-mobile, h#{$i});
       line-height: map-get($heading-line-heights-mobile, h#{$i});
     }
   }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  color: $dark-purple;
+  font-family: $header-font;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: 500; // Medium
+}
+
+h3,
+.h3,
+h4,
+.h4 {
+  font-weight: 400; // Regular
 }

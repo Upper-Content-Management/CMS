@@ -5,7 +5,9 @@ add_action('after_setup_theme', 'register_primary_menus');
 function register_primary_menus() {
   register_nav_menus(array(
     'header' => 'Header',
-    'footer' => 'Footer',
+    'footer_company' => 'Footer - Company',
+    'footer_program' => 'Footer - Program',
+    'footer_information' => 'Footer - Information',
   ));
 }
 

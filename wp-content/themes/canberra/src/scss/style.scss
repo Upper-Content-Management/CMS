@@ -1,7 +1,13 @@
 @import "setup/variables";
 @import "setup/mixins";
 @import "setup/fonts";
+@import "setup/reset";
 
 @import "global/content";
+@import "global/buttons";
+@import "global/container";
+@import "global/header";
+@import "global/footer";
+@import "global/grid";
 
-// @import '../../components/global/example';
+// @import "../../components/example/example";
