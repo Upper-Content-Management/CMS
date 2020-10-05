@@ -395,16 +395,21 @@
                                     "key": "field_5f79b895d49de",
                                     "label": "Link",
                                     "name": "link",
-                                    "type": "link",
+                                    "type": "post_object",
                                     "instructions": "",
-                                    "required": 0,
+                                    "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array"
+                                    "post_type": "",
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "object",
+                                    "ui": 1
                                 }
                             ]
                         }
@@ -421,9 +426,9 @@
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "template-componentized.php"
+                "value": "page"
             }
         ]
     ],
@@ -447,5 +452,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1601812667
+    "modified": 1601880697
 }
