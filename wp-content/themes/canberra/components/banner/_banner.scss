@@ -6,16 +6,16 @@
   .right {
     height: 100vh;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include mobile {
       width: 100%;
     }
   }
 
   .left {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     .h1 {
       text-align: center;
@@ -23,9 +23,6 @@
   }
 
   .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     @include mobile {
       height: 50vh;
     }
