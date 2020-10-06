@@ -19,3 +19,7 @@
 .container-xsmall {
   max-width: 580px + $container-padding * 2;
 }
+
+section {
+  margin-bottom: spacing(5);
+}
