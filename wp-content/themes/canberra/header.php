@@ -13,3 +13,40 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
+  <header>
+    <div id="nav-desktop">
+      <div class="left">
+        <a href="hamburger">
+          <?= get_svg('down') ?>
+        </a>
+        <a href="search">
+          <?= get_svg('down') ?>
+        </a>
+        <a href="<?= home_url() ?> ">
+          <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        </a>
+      </div>
+      <div class="right">
+        <?php wp_nav_menu(array('echo' => true)); ?>
+      </div>
+    </div>
+    <div id="nav-mobile-placeholder"></div>
+    <div id="nav-mobile">
+      <div class="left">
+        <a href="<?= home_url() ?> ">
+          <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        </a>
+      </div>
+      <div class="right">
+        <div id="nav-mobile-bg-overlay" class="hidden visually-hidden"></div>
+        <div id="nav-mobile-offcanvas">
+          <?php wp_nav_menu(array('echo' => true)); ?>
+        </div>
+        <div id="toggle-nav-mobile-offcanvas" class="hamburger hamburger--spin">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>

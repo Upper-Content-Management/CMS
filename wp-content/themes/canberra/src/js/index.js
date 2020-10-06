@@ -1,13 +1,7 @@
 import '../scss/style.scss'
+import MobileMenu from './components/mobile-menu'
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault()
-      const modal = document.querySelector(e.currentTarget.getAttribute('href'))
-      // Toggle modal
-
-    })
-  })
+  MobileMenu()
 })
