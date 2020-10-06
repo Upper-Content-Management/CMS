@@ -107,7 +107,7 @@
                         {
                             "key": "field_5f79b7ead49d0",
                             "label": "Large Image",
-                            "name": "large_image",
+                            "name": "largeimage",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -210,7 +210,7 @@
                         {
                             "key": "field_5f79b82dd49d5",
                             "label": "Smaller Images",
-                            "name": "smaller_images",
+                            "name": "smallerimages",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -452,5 +452,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1601880697
+    "modified": 1601941956
 }
