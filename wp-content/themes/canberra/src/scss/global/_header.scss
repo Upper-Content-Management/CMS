@@ -4,9 +4,10 @@
   position: absolute;
   display: flex;
   z-index: 1;
+  background-color: $black;
   .left,
   .right {
-    height: 100vh;
+    height: auto;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -18,7 +19,7 @@
 }
 
 #nav-desktop {
-  @include mq(m, max) {
+  @include mq(l, max) {
     display: none;
   }
 
@@ -47,7 +48,7 @@
   }
 }
 #nav-mobile {
-  @include mq(m, min) {
+  @include mq(l, min) {
     display: none;
   }
 
