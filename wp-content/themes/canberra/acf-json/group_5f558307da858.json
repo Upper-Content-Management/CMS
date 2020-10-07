@@ -48,15 +48,15 @@
                             "type": "image",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": null,
                             "wrapper": {
                                 "width": "",
-                                "class": "",
+                                "class": "links",
                                 "id": ""
                             },
-                            "return_format": "array",
+                            "return_format": "Text",
                             "preview_size": "medium",
-                            "library": "all",
+                            "library": "uploadedTo",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -76,12 +76,12 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5f79b7bfd49ce",
+                            "key": "field_5f7d5ab4bf14e",
                             "label": "Text",
                             "name": "text",
                             "type": "wysiwyg",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -416,6 +416,43 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5f7d4eb04be4f": {
+                    "key": "layout_5f7d4eb04be4f",
+                    "name": "gallery",
+                    "label": "Gallery",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f7d4ebe4be50",
+                            "label": "Gallery",
+                            "name": "gallery",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "insert": "append",
+                            "library": "all",
+                            "min": "",
+                            "max": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -430,6 +467,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -441,7 +485,6 @@
         "the_content",
         "excerpt",
         "discussion",
-        "comments",
         "slug",
         "author",
         "format",
@@ -452,5 +495,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1601941956
+    "modified": 1602050945
 }
