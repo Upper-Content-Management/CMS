@@ -42,21 +42,21 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5f79b715d49cc",
+                            "key": "field_5f7e750cdbce0",
                             "label": "Image",
                             "name": "image",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": null,
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "links",
+                                "class": "",
                                 "id": ""
                             },
-                            "return_format": "Text",
+                            "return_format": "array",
                             "preview_size": "medium",
-                            "library": "uploadedTo",
+                            "library": "all",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -495,5 +495,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602050945
+    "modified": 1602123028
 }
