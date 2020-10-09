@@ -29,7 +29,7 @@
                             "type": "text",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": null,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -47,14 +47,14 @@
                             "name": "image",
                             "type": "image",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
+                            "return_format": "id",
                             "preview_size": "medium",
                             "library": "all",
                             "min_width": "",
@@ -489,5 +489,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602227851
+    "modified": 1602238391
 }

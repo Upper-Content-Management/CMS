@@ -2,6 +2,7 @@
 
 /**
  *  Template Name: Article
+ * Template Post Type: article
  */
 
 get_header();
@@ -12,7 +13,7 @@ if ($page_components) {
     $component_name = str_replace('_', '-', $page_component['acf_fc_layout']);
     global $fields;
     $fields = $page_component;
-    get_template_part("components/$component_name/$component_name");
+    get_template_part("components/article/$component_name/$component_name");
   }
 }
 
