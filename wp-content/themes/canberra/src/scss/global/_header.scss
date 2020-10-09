@@ -2,9 +2,11 @@
 #nav-mobile {
   width: 100%;
   position: absolute;
+  top: 0;
   display: flex;
   z-index: 1;
   background-color: $black;
+
   .left,
   .right {
     height: auto;
@@ -16,11 +18,13 @@
       font-size: 32px;
     }
   }
-}
 
-#nav-desktop {
-  @include mq(l, max) {
-    display: none;
+  .left {
+    svg {
+      path {
+        fill: $alt-colour;
+      }
+    }
   }
 
   .right {
@@ -42,6 +46,9 @@
       }
     }
   }
+}
+@include mq(l, max) {
+  display: none;
 }
 
 #nav-mobile-placeholder {

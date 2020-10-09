@@ -9,9 +9,12 @@
 @import "global/header";
 @import "global/footer";
 @import "global/grid";
+@import "global/card";
 
 @import "hamburgers/hamburgers.scss";
 
 @import "../../components/banner/banner";
 @import "../../components/textarea/textarea";
 @import "../../components/content4block/content4block";
+
+@import "../../components/house/textarea/textarea";
