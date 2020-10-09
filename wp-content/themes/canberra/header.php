@@ -16,9 +16,6 @@
   <header>
     <div id="nav-desktop">
       <div class="left">
-        <a href="hamburger">
-          <?= get_svg('down') ?>
-        </a>
         <a href="search">
           <?= get_svg('down') ?>
         </a>
