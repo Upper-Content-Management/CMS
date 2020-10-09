@@ -6,6 +6,9 @@
   display: flex;
   z-index: 1;
   background-color: $black;
+  @include mq(l, max) {
+    display: none;
+  }
 
   .left,
   .right {
