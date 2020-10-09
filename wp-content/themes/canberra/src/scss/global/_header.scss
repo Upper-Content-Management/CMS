@@ -30,6 +30,10 @@
       > .menu-item {
         > a {
           color: white;
+          &:hover {
+            transition: $hover-transition;
+            color: $alt-colour;
+          }
         }
 
         &:not(:first-child) {

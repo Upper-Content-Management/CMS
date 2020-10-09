@@ -43,6 +43,9 @@
       width: 24px;
       height: 24px;
       margin-right: 10px;
+      path {
+        fill: $alt-colour;
+      }
     }
   }
   @include mobile {
