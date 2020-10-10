@@ -72,7 +72,7 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 0,
+                            "media_upload": 1,
                             "delay": 0
                         }
                     ],
@@ -165,5 +165,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602241611
+    "modified": 1602297967
 }

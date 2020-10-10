@@ -18,8 +18,8 @@
             "layouts": {
                 "layout_5f80439d1f1fd": {
                     "key": "layout_5f80439d1f1fd",
-                    "name": "image",
-                    "label": "Image",
+                    "name": "imageandtext",
+                    "label": "Image and Text",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -45,17 +45,7 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5f8043b1f0850": {
-                    "key": "layout_5f8043b1f0850",
-                    "name": "textarea",
-                    "label": "Text Area",
-                    "display": "block",
-                    "sub_fields": [
+                        },
                         {
                             "key": "field_5f8037cf44836",
                             "label": "Text",
@@ -165,5 +155,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602241505
+    "modified": 1602297410
 }
