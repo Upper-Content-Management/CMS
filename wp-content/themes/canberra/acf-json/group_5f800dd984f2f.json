@@ -185,7 +185,6 @@
         "the_content",
         "excerpt",
         "discussion",
-        "comments",
         "slug",
         "author",
         "format",
@@ -196,5 +195,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602241380
+    "modified": 1602299307
 }

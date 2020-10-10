@@ -131,6 +131,6 @@ global $fields;
 <?php
 if ($fields) : ?>
   <div class="acf-map" data-zoom="16">
-    <div class="marker" data-lat="<?php echo esc_attr($fields['location']['lat']); ?>" data-lng="<?php echo esc_attr($fields['location']['lng']); ?>"></div>
+    <div class="marker" data-lat="<?= esc_attr($fields['location']['lat']); ?>" data-lng="<?= esc_attr($fields['location']['lng']); ?>"></div>
   </div>
 <?php endif; ?>
