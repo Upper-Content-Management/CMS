@@ -2,8 +2,8 @@
 global $fields;
 ?>
 <section id="textarea">
-  <div class="title">
-    <?= get_the_title(); ?>
+  <div class="container title">
+    <h1><?= get_the_title(); ?></h1>
   </div>
   <div class="container-small">
     <div class="text"><?= $fields['text'] ?></div>
