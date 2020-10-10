@@ -24,7 +24,8 @@ function create_custom_post_types() {
     'labels' => array(
       'name' => 'News',
       'singular_name' => 'Article',
-      'add_new_item' => 'Add New Article'
+      'add_new_item' => 'Add New Article',
+      'publicly_queryable' => true,
     ),
     'public' => true,
     'has_archive' => true,
@@ -36,7 +37,8 @@ function create_custom_post_types() {
     'labels' => array(
       'name' => 'Houses',
       'singular_name' => 'House',
-      'add_new_item' => 'Add New House'
+      'add_new_item' => 'Add New House',
+      'publicly_queryable' => true,
     ),
     'public' => true,
     'has_archive' => true,
@@ -47,7 +49,8 @@ function create_custom_post_types() {
     'labels' => array(
       'name' => 'Architects',
       'singular_name' => 'Architect',
-      'add_new_item' => 'Add New Architect'
+      'add_new_item' => 'Add New Architect',
+      'publicly_queryable' => true,
     ),
     'public' => true,
     'has_archive' => true,
@@ -55,3 +58,8 @@ function create_custom_post_types() {
     'rewrite' => array('slug' => 'architect'),
   ));
 }
+// Method 2: Setting.
+function my_acf_init() {
+  acf_update_setting('google_api_key', 'AIzaSyDsVySgEIT9FOgtB0nPYOLojZqHcAGSnzI');
+}
+add_action('acf/init', 'my_acf_init');
