@@ -29,7 +29,7 @@
                             "type": "text",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": 0,
+                            "conditional_logic": null,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -467,13 +467,6 @@
                 "operator": "==",
                 "value": "page"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
         ]
     ],
     "menu_order": 0,
@@ -485,6 +478,7 @@
         "the_content",
         "excerpt",
         "discussion",
+        "comments",
         "slug",
         "author",
         "format",
@@ -495,5 +489,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602123028
+    "modified": 1602335505
 }
