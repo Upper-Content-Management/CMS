@@ -160,6 +160,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5f8251b387457": {
+                    "key": "layout_5f8251b387457",
+                    "name": "buildyear",
+                    "label": "Build Year",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f8251bd87458",
+                            "label": "Date",
+                            "name": "date",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -195,5 +224,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602299307
+    "modified": 1602376152
 }
