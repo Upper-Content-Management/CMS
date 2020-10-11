@@ -1,5 +1,6 @@
 .content {
-  ul, ol {
+  ul,
+  ol {
     padding-inline-start: 40px;
   }
   ul li {
@@ -7,5 +8,11 @@
   }
   ol li {
     list-style-type: decimal;
+  }
+}
+section {
+  margin-top: 43px;
+  @include mq(l, max) {
+    margin-top: 0px;
   }
 }

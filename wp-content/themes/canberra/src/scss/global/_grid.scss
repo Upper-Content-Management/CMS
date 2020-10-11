@@ -1,0 +1,42 @@
+.grid,
+.grid-col-3,
+.grid-col-4 {
+  display: grid;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+  @include mq(s, max) {
+    column-gap: $column-gap-mobile;
+    row-gap: $row-gap-mobile;
+  }
+}
+
+.grid {
+  grid-template-columns: repeat(12, 1fr);
+  @include mq(s, max) {
+    grid-template-columns: repeat(4, 1fr);
+    > * {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+  @include mq(l, max) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+  @include mq(s, max) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-col-3,
+.grid-col-4 {
+  @include mq(s, max) {
+    grid-template-columns: 1fr;
+  }
+}

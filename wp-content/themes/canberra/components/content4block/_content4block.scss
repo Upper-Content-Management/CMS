@@ -1,0 +1,19 @@
+#content4block {
+  .container {
+    .toprow {
+      display: flex;
+      height: 500px;
+    }
+    .largecard {
+      width: 50%;
+    }
+    .smallcards {
+      width: 50%;
+      height: 50%;
+    }
+    .widecard {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}

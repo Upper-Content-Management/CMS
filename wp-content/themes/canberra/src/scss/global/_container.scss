@@ -1,0 +1,25 @@
+.container,
+.container-small,
+.container-xsmall {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px + $container-padding * 2;
+}
+
+.container-small {
+  max-width: 994px + $container-padding * 2;
+}
+
+.container-xsmall {
+  max-width: 580px + $container-padding * 2;
+}
+
+section {
+  margin-bottom: spacing(5);
+}
