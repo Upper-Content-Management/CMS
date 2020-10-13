@@ -17,4 +17,6 @@ if ($page_components) {
   }
 }
 
+if (is_single()) comments_template();
+
 get_footer();
