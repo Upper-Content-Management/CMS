@@ -18,6 +18,7 @@ if ($pagename == 'news') {
 ?>
 <section id="list">
   <div class="container">
+    <h1><?= basename(get_permalink()); ?></h1>
     <div class="grid-col-4">
       <?php
       while ($loop->have_posts()) : $loop->the_post();
