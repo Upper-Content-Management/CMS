@@ -147,12 +147,11 @@
         "slug",
         "author",
         "format",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
-    "modified": 1602299019
+    "modified": 1602477361
 }

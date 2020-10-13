@@ -16,6 +16,7 @@ function admin_style() {
   wp_enqueue_style('admin-styles', get_template_directory_uri() . '/admin.css');
 }
 add_action('admin_enqueue_scripts', 'admin_style');
+add_theme_support('post-thumbnails');
 
 // custom post type function
 add_action('init', 'create_custom_post_types');
@@ -31,7 +32,7 @@ function create_custom_post_types() {
     'has_archive' => true,
     'menu_icon' => 'dashicons-welcome-widgets-menus',
     'rewrite' => array('slug' => 'article'),
-    'supports' => array('title', 'editor', 'thumbnail')
+    'supports' => array('title', 'editor', 'thumbnail', 'comments'),
   ));
   register_post_type('house', array(
     'labels' => array(
@@ -44,6 +45,7 @@ function create_custom_post_types() {
     'has_archive' => true,
     'menu_icon' => 'dashicons-admin-home',
     'rewrite' => array('slug' => 'house'),
+    'supports' => array('title', 'editor', 'thumbnail', 'comments'),
   ));
   register_post_type('architect', array(
     'labels' => array(
@@ -56,10 +58,23 @@ function create_custom_post_types() {
     'has_archive' => true,
     'menu_icon' => 'dashicons-businessperson',
     'rewrite' => array('slug' => 'architect'),
+    'supports' => array('title', 'editor', 'thumbnail', 'comments'),
   ));
 }
-// Method 2: Setting.
 function my_acf_init() {
   acf_update_setting('google_api_key', 'AIzaSyDsVySgEIT9FOgtB0nPYOLojZqHcAGSnzI');
 }
 add_action('acf/init', 'my_acf_init');
+
+function tg_include_custom_post_types_in_search_results($query) {
+  if ($query->is_main_query() && $query->is_search() && !is_admin()) {
+    $query->set('post_type', array('article', 'architect', 'house'));
+  }
+}
+add_action('pre_get_posts', 'tg_include_custom_post_types_in_search_results');
+
+function switch_on_comments_automatically() {
+  global $wpdb;
+  $wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET comment_status = 'open'"));
+}
+switch_on_comments_automatically();

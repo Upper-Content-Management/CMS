@@ -1,0 +1,29 @@
+#comments,
+#respond,
+.commentlist {
+  @extend .container-small;
+}
+
+.commentlist > * {
+  a {
+    text-decoration: none;
+    color: $alt-colour;
+  }
+}
+
+#respond {
+  .logged-in-as {
+    * {
+      text-decoration: none;
+      color: $alt-colour;
+    }
+  }
+  .comment-form-comment {
+    label[for="comment"] {
+      display: none;
+    }
+    #comment {
+      width: 50%;
+    }
+  }
+}

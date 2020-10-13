@@ -154,16 +154,14 @@
         "the_content",
         "excerpt",
         "discussion",
-        "comments",
         "slug",
         "author",
         "format",
-        "featured_image",
         "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
-    "modified": 1602297967
+    "modified": 1602477375
 }
