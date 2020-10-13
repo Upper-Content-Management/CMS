@@ -78,3 +78,22 @@ function switch_on_comments_automatically() {
   $wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET comment_status = 'open'"));
 }
 switch_on_comments_automatically();
+
+function remove_posts_menu() {
+  remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'remove_posts_menu');
+
+function namespace_add_custom_types($query) {
+  if ($query->is_search)
+    $query->set('post_type', array('post', 'house', 'architect', 'article'));
+  return $query;
+}
+add_filter('pre_get_posts', 'namespace_add_custom_types');
+
+/** * Search Form */
+function wp_search_form($form) {
+  $form = '<section class="search search-form"><form role="search" method="get" action="' . home_url('/') . '" > <label class="screen-reader-text" for="s">' . __('', 'domain') . '</label> <input type="search" class="search-field" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." /> <input type="submit" id="searchsubmit" class="search-submit" value="' . esc_attr__('Go', 'domain') . '" /> </form></section>';
+  return $form;
+}
+add_filter('get_search_form', 'wp_search_form');
