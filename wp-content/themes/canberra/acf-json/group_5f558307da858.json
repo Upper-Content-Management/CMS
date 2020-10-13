@@ -29,7 +29,7 @@
                             "type": "text",
                             "instructions": "",
                             "required": 1,
-                            "conditional_logic": null,
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -453,6 +453,53 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5f824c91f6eb9": {
+                    "key": "layout_5f824c91f6eb9",
+                    "name": "map",
+                    "label": "Map",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f824cc9f6ebb",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f824cb0f6eba",
+                            "label": "Map",
+                            "name": "map",
+                            "type": "google_map",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "center_lat": "35.2809",
+                            "center_lng": "149.1300",
+                            "zoom": "",
+                            "height": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -489,5 +536,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1602335505
+    "modified": 1602457312
 }
