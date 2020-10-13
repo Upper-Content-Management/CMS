@@ -1,0 +1,23 @@
+#list {
+  .frame {
+    display: flex;
+    background-color: lightgrey;
+    border-radius: 10px;
+    height: 300px;
+    .card {
+      width: 100%;
+      .img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .gradient {
+        opacity: 1;
+        .data {
+          * {
+            color: $alt-colour;
+          }
+        }
+      }
+    }
+  }
+}
