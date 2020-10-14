@@ -2,7 +2,6 @@
 global $fields;
 ?>
 
-<!-- add title field -->
 <section id="title">
     <div class="title">
         <?= $fields['title']; ?>
@@ -140,31 +139,66 @@ global $fields;
         })(jQuery);
     </script>
     
-    <?php 
-    $query = new WP_Query( 
-        array( 
-        'post_type' => 'house', 
-        'posts_per_page' => -1
+    <?php
+   
+    $query = new WP_Query(
+        array(
+        'post_type' => 'house',
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'title'
         )
-    );
+    ); ?>
+    
+    <div id="house_list">
+        <table>
+            <th>House name</th>
+            <th>Address</th>
+            <th>Location</th>
 
+    <?php // if there are existing posts with the type "house", get the post ID, title and link
     if($query->have_posts()) :
     while($query->have_posts()):
     $query->the_post();
-    $the_ID = get_the_ID();
-    $get_google_map = get_field('location', $value);
-
-    $output_map[$the_ID]['map'] = '<div class="marker" data-lat="'.$get_google_map['lat'].'" data-lng="'.$get_google_map['lng'].'"></div>';
-    
+    $id = get_the_ID();
+    $title = get_the_title();
+    $link = get_permalink();
+   
+    // if the parent field "house_components" contains row entries, get the sub field "location"
+    if( have_rows('house_components') ):
+    while ( have_rows('house_components') ) : the_row();
+    $location = get_sub_field('location');
+       
+    $output_map[$id]['location'] = '<div class="marker" data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'"></div>';
+   
     endwhile; endif;
-    wp_reset_postdata(); ?>
-    
+    wp_reset_postdata();
+   
+    // display the list of houses ?>
+            <tr>
+                <td><a href="<?php echo $link ?>"><?php echo $title ?></a></td>
+                <td><?php echo $location['address'] ?></td>
+                <td><?php echo $location['lat'] . ", " . $location['lng']; ?></td>
+            </tr>
+   
+    <?php endwhile;
+    else :
+   
+    // if there "house_components" doesn't contain row entries ?>
+    <p>No houses</p>
+   
+    <?php endif; ?>
+                
+        </table>
+    </div>
+
     <div class="acf-map">
-       <?php
-       foreach( $output_map as $key => $map_marker ):
-	   echo $map_marker['location'];
-	   endforeach;
-	   ?>
+        <?php
+        // for each house post, display the location as a marker on the map
+        foreach( $output_map as $key => $map_marker ):
+        echo $map_marker['location'];
+        
+        endforeach; ?>
     </div>
 
 </section>
