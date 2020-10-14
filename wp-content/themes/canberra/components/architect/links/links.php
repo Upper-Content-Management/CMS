@@ -6,16 +6,16 @@ global $fields;
     <div class="grid-col-4">
       <?php foreach ($fields['links'] as $links) : ?>
         <div class="frame">
-          <div class="card">
-            <div class="img" style="background-image: url('<?= $links['image']['url'] ?>');"></div>
-            <div class="gradient">
-              <div class="data">
-                <a href="<?= get_permalink($links['link']) ?>">
+          <a href="<?= get_permalink($links['link']) ?>">
+            <div class="card">
+              <div class="img" style="background-image: url('<?= $links['image']['url'] ?>');"></div>
+              <div class="gradient">
+                <div class="data">
                   <h3><?= $links['link']->post_title; ?></h3>
-                </a>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       <?php endforeach; ?>
     </div>
