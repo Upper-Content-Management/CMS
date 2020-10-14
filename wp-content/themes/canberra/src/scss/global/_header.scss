@@ -24,6 +24,9 @@
   }
 
   .left {
+    a {
+      margin-right: 10px;
+    }
     svg {
       path {
         fill: $alt-colour;

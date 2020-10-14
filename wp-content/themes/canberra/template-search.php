@@ -1,24 +1,19 @@
 <?php
 
 /**
- *  Template Name: List
+ *  Template Name: Search
  */
 
-get_header();
+$loop = new WP_Query(array('post_type' => array('house', 'architect', 'article'), 'posts_per_page' => 100));
+get_header(); ?>
 
-if ($pagename == 'houses') {
-  $loop = new WP_Query(array('post_type' => 'house', 'posts_per_page' => 10));
-}
-if ($pagename == 'architects') {
-  $loop = new WP_Query(array('post_type' => 'architect', 'posts_per_page' => 10));
-}
-if ($pagename == 'news') {
-  $loop = new WP_Query(array('post_type' => 'article', 'posts_per_page' => 10));
-}
-?>
-<section id="list">
-  <div class="container">
-    <h1><?= basename(get_permalink()); ?></h1>
+<section id="search">
+  <div class="container-small">
+    <h1>Search</h1>
+    <?php
+    get_search_form();
+    ?>
+
     <div class="grid-col-4">
       <?php
       while ($loop->have_posts()) : $loop->the_post();
@@ -34,14 +29,10 @@ if ($pagename == 'news') {
               </div>
             </div>
           </div>
-          <div class="entry-content">
-            <?php the_content(); ?>
-          </div>
         </div>
 
       <?php endwhile; ?>
     </div>
   </div>
 </section>
-<?php
-get_footer();
+<?php get_footer();

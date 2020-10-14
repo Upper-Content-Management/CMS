@@ -12,7 +12,8 @@
 }
 
 #respond {
-  .logged-in-as {
+  .logged-in-as,
+  .must-log-in {
     * {
       text-decoration: none;
       color: $alt-colour;

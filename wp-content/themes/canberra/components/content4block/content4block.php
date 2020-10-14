@@ -12,8 +12,8 @@ global $fields;
               <div class="img" style="background-image: url('<?= $largeimage['image']['url'] ?>');"></div>
               <div class="gradient">
                 <div class="data">
-                  <h6><?= $largeimage['title'] ?></h6>
-                  <h3><?= $largeimage['description'] ?></h3>
+                  <h3><?= $largeimage['title'] ?></h3>
+                  <h6><?= $largeimage['description'] ?></h6>
                 </div>
               </div>
             </div>
@@ -27,8 +27,8 @@ global $fields;
               <div class="img" style="background-image: url('<?= $smallerimage['image']['url'] ?>');"></div>
               <div class="gradient">
                 <div class="data">
-                  <h6><?= $smallerimage['title'] ?></h6>
-                  <h3><?= $smallerimage['description'] ?></h3>
+                  <h3><?= $smallerimage['title'] ?></h3>
+                  <h6><?= $smallerimage['description'] ?></h6>
                 </div>
               </div>
             </div>
@@ -43,8 +43,8 @@ global $fields;
             <div class="img" style="background-image: url('<?= $wideimage['image']['url'] ?>');"></div>
             <div class="gradient">
               <div class="data">
-                <h6><?= $wideimage['title'] ?></h6>
-                <h3><?= $wideimage['description'] ?></h3>
+                <h3><?= $wideimage['title'] ?></h3>
+                <h6><?= $wideimage['description'] ?></h6>
               </div>
             </div>
           </div>

@@ -18,6 +18,7 @@
     background-size: cover;
     opacity: 0;
     transition: $hover-transition;
+    border-radius: 10px;
 
     &:hover {
       opacity: 1;
@@ -30,8 +31,9 @@
       text-overflow: ellipsis;
 
       h3,
+      h6,
       p {
-        color: black;
+        color: $alt-colour;
       }
     }
   }

@@ -16,11 +16,14 @@
   <header>
     <div id="nav-desktop">
       <div class="left">
-        <a href="search">
-          <?= get_svg('down') ?>
-        </a>
         <a href="<?= home_url() ?> ">
           <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        </a>
+        <a href="<?= get_page_link(get_page_by_title('search')->ID); ?>">
+          <?= get_svg('search') ?>
+        </a>
+        <a href="<?= wp_login_url(); ?>">
+          <?= get_svg('user') ?>
         </a>
       </div>
       <div class="right">
