@@ -1,49 +1,52 @@
-.acf-map {
-  width: 100%;
-  height: 600px;
-  border: #ccc solid 1px;
-  margin: 20px 0;
-}
+#map {
+  .acf-map {
+    width: 100%;
+    height: 600px;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+  }
 
-// Fixes potential theme css conflict.
-.acf-map img {
-  max-width: inherit !important;
-}
+  // Fixes potential theme css conflict.
+  .acf-map img {
+    max-width: inherit !important;
+  }
 
-.title{
+  .title {
     margin-top: 30px;
     color: #2b2b2b;
-    font-family: halyard-display, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: halyard-display, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 4rem;
     line-height: 1;
     margin-bottom: 24px;
     text-align: center;
     font-weight: 500;
-}
+  }
 
-#house_list{
+  #house_list {
     width: 90vw;
     padding: 20px 0;
     margin: 0 auto;
-}
+  }
 
-#house_list table{
+  #house_list table {
     margin: 0 auto;
-}
+  }
 
-#house_list th{
+  #house_list th {
     font-size: 1.2rem;
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
-}
+  }
 
-#house_list td{
+  #house_list td {
     padding: 10px 20px;
     text-align: center;
     vertical-align: center;
     border-bottom: 1px solid #ddd;
-}
+  }
 
-#house_list tr:hover{
+  #house_list tr:hover {
     background-color: #f5f5f5;
+  }
 }
