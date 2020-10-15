@@ -12,7 +12,4 @@
 }
 section {
   margin-top: 43px;
-  @include mq(l, max) {
-    margin-top: 0px;
-  }
 }
