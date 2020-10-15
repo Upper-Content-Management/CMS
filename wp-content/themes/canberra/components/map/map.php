@@ -2,13 +2,11 @@
 global $fields;
 ?>
 
-<section id="title">
+<section id="map">
     <div class="title">
         <?= $fields['title']; ?>
     </div>
-</section>
-
-<section id="map">
+    
     <!-- ACF Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsVySgEIT9FOgtB0nPYOLojZqHcAGSnzI"></script>
     <script type="text/javascript">
