@@ -39,7 +39,7 @@ global $fields;
         $markers.each(function() {
           initMarker($(this), map);
         });
-
+        
         // Center map based on markers.
         centerMap(map);
 
@@ -69,11 +69,15 @@ global $fields;
           lng: parseFloat(lng)
         };
 
-        // Create marker instance.
-        var marker = new google.maps.Marker({
-          position: latLng,
-          map: map
-        });
+          // Create marker instance.           
+          var icon = new google.maps.MarkerImage('<?= get_svg("icon.svg") ?>');
+            
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+//            icon: icon,
+            title: 'house location'
+          });
 
         // Append to reference for later use.
         map.markers.push(marker);
@@ -193,11 +197,77 @@ global $fields;
 
   <div class="acf-map">
     <?php
-    // for each house post, display the location as a marker on the map
-    foreach ($output_map as $key => $map_marker) :
-      echo $map_marker['location'];
+   
+    $query = new WP_Query(
+        array(
+        'post_type' => 'house',
+        'posts_per_page' => -1,
+        'order' => 'ASC',
+        'orderby' => 'title'
+        )
+    );
 
-    endforeach; ?>
-  </div>
+    // if there are existing posts with the type "house", get the post ID, title and link
+    if($query->have_posts()) :
+    while($query->have_posts()):
+    $query->the_post();
+    $id = get_the_ID();
+    $title = get_the_title();
+    $link = get_permalink();
+   
+    // if the parent field "house_components" contains row entries, get the sub field "location"
+    if( have_rows('house_components') ):
+    while ( have_rows('house_components') ) : the_row();
+    $location = get_sub_field('location');
+    $gallery = get_sub_field('gallery');
+    $image = $gallery[0];
+    $image_src = $image['url'];
+    $image_alt = $image['alt'];
+
+    $output_map[$id]['location'] = 
+    '<div class="marker" data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'">
+        <p class="house_name"><a href="'.$link.'">'.$title.'</a></p>
+        <p class="house_address">'.$location['address'].'</p>
+    </div>';
+
+    $output_table[$id]['row'] = 
+    '<tr class="row">
+        <td><a href="'.$link.'">'.$title.'</a></td><td>'.$location['address'].'</td><td>'.$location['lat'].', '.$location['lng'].'</td>
+    </tr>';
+            
+    wp_reset_postdata();
+   
+    endwhile; endif;
+   
+    endwhile;
+    else :
+    
+        // no houses to display
+   
+    endif; ?>
+
+    <div class="acf-map">
+        <?php
+        // for each house post, display the location as a marker on the map
+        foreach( $output_map as $key => $map_marker ):
+        echo $map_marker['location'];
+        endforeach;
+        ?>
+    </div>
+    
+    <div id="house_list">
+        <table>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Coordinates</th>
+        
+        <?php
+        // for each house post, display the house data in a row in the table
+        foreach( $output_table as $key => $house_data ):
+            echo $house_data['row'];
+            endforeach; ?>
+                
+        </table>
+    </div>
 
 </section>
