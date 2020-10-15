@@ -74,7 +74,7 @@ global $fields;
           };
 
           // Create marker instance.           
-          var icon = new google.maps.MarkerImage('<?= get_svg("icon") ?>');
+//          var icon = new google.maps.MarkerImage('<?php //get_svg("icon") ?>');
             
           var marker = new google.maps.Marker({
             position: latLng,
