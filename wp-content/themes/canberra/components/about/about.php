@@ -11,7 +11,7 @@
 
     <div class="text-block">
       <div class="heading">
-        <?= $fields['title'] ?>
+        <h1><?= $fields['title'] ?></h1>
       </div>
       <div class="body">
         <?= $fields['textarea'] ?>
