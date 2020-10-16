@@ -1,0 +1,142 @@
+/*-------  ABOUT STYLESHEET -------*/
+
+/*------- Image & text -------*/
+
+.img-container{
+  display: inline-block;
+}
+
+.img img{
+  border-bottom-right-radius: 5px;
+  float: left;
+  filter: grayscale(100%);
+  width: 50%;
+  height: 635px;
+  object-fit: cover;
+}
+
+.text-block{
+  width: 30%;
+  float: left;
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+
+.text-block .text .heading{
+  font-size: 50px;
+}
+
+/*------- Contact section button (arrow) -------*/
+
+.down-arrow{
+  text-align: right;
+  margin-right: 3em;
+  margin-top: 0;
+}
+
+.down-arrow ins{
+  text-decoration: none;
+  font-size: 12px;
+  float: right;
+  margin-left: 10px;
+}
+
+/*------- Contact Form 7 (about) -------*/
+ 
+.wpcf7 {
+  width: 50%;
+  margin-left: 3em;
+  float: left;
+  }
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+   border: 1px solid #DAA520;
+   border-radius: 4px;
+}
+
+.wpcf7-submit{
+  padding-left: 7em;
+  padding-right: 7em;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #d4d4d4;
+  background-color: #d4d4d4;
+}
+
+.wpcf7-submit:active{
+  background-color: #DAA520;
+}
+
+.text{
+    padding-bottom: 41%;
+    padding-top: 3%;
+  }
+
+.text .form{
+  margin-top: 5em;
+}
+
+.text .details{
+    margin-left: 10em;
+    float: left;
+  }
+  
+/*------- Media queries for tablet and mobile -------*/
+
+@media screen and (max-width: 992px) {
+
+    .img img{
+      filter: grayscale(100%);
+      width: 100%;
+      height: 600px;
+    }
+
+    .text-block{
+      width: 70%;
+      margin-top: 3rem;
+      margin-left: 7rem;
+      margin-bottom: 0;
+    }
+
+    .wpcf7 {
+      width: 100%;
+      margin-left: 10%;
+      }
+
+    .text{
+      padding-bottom: 85%;
+      }
+
+    .text .details{
+      width: 100%;
+      margin-left: 10%;
+      margin-top: 5px;
+      }
+
+  }
+
+@media only screen and (max-width: 600px) {
+
+    .text-block{
+      margin-left: 5rem;
+    }
+
+    .wpcf7 {
+      width: 100%;
+      margin-left: 10%;
+      }
+
+    .text{
+      padding-bottom: 135%;
+      }
+
+    .text .details{
+      width: 100%;
+      margin-left: 10%;
+      margin-top: 5px;
+      }
+
+
+  }
