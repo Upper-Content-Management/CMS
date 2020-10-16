@@ -1,9 +1,10 @@
 <?php
 global $fields;
+$markericon = get_svg('icon');
 ?>
 
 <section id="map">
-    <div class="title">
+    <div class="header">
         <?= $fields['title']; ?>
     </div>
     
@@ -77,7 +78,7 @@ global $fields;
           var marker = new google.maps.Marker({
             position: latLng,
             map: map,
-//            icon: icon,
+//            icon: $markericon,
             title: 'house location'
           });
 
@@ -143,6 +144,7 @@ global $fields;
     
     <?php
    
+    // find all house posts
     $query = new WP_Query(
         array(
         'post_type' => 'house',
@@ -164,23 +166,29 @@ global $fields;
     if( have_rows('house_components') ):
     while ( have_rows('house_components') ) : the_row();
     $location = get_sub_field('location');
-    $gallery = get_sub_field('gallery');
-    $image = $gallery[0];
-    $image_src = $image['url'];
-    $image_alt = $image['alt'];
+    $image = get_sub_field('gallery');
+    
+    if( $image ):
+        foreach( $image as $image ):          
+            $image_src = $image['url'];
+            $image_alt = $image['alt']; ?>
+        <?php endforeach;
+    endif;
+    
+    $links = get_sub_field('links');
 
     $output_map[$id]['location'] = 
     '<div class="marker" data-lat="'.$location['lat'].'" data-lng="'.$location['lng'].'">
         <p class="house_name"><a href="'.$link.'">'.$title.'</a></p>
         <p class="house_address">'.$location['address'].'</p>
+        <img class="house_image" src="'.$image_src.'" alt="'.$image_alt.'">
     </div>';
 
     $output_table[$id]['row'] = 
     '<tr class="row">
-        <td><a href="'.$link.'">'.$title.'</a></td><td>'.$location['address'].'</td><td>'.$location['lat'].', '.$location['lng'].'</td>
+        <td><a href="'.$link.'">'.$title.'</a></td><td>'.$location['address'].'</td>
+        <td>'.$location['lat'].', '.$location['lng'].'</td>
     </tr>';
-            
-    wp_reset_postdata();
    
     endwhile; endif;
    
@@ -189,7 +197,9 @@ global $fields;
     
         // no houses to display
    
-    endif; ?>
+    endif; 
+            
+    wp_reset_postdata(); ?>
 
     <div class="acf-map">
         <?php
