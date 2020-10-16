@@ -73,12 +73,6 @@ function tg_include_custom_post_types_in_search_results($query) {
 }
 add_action('pre_get_posts', 'tg_include_custom_post_types_in_search_results');
 
-function switch_on_comments_automatically() {
-  global $wpdb;
-  $wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET comment_status = 'open'"));
-}
-switch_on_comments_automatically();
-
 function remove_posts_menu() {
   remove_menu_page('edit.php');
 }
