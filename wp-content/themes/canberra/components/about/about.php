@@ -31,4 +31,16 @@
     </ins>
   </div>
 
+  <div class="form">[contact-form-7 id="354" title="About form"]</div>
+  <div class="details">
+    <h4 class="contact-head2">Our contact information</h4>
+    <ul>
+      <li>Monday - Friday | 9am - 5pm</li>
+      <li>+61 2 6201 5111</li>
+
+      <li>11 Kirinari Street</li>
+
+      <li>Bruce ACT 2617</li>
+    </ul>
+  </div>
 </section>
