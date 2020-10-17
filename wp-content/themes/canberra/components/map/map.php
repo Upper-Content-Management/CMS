@@ -71,7 +71,7 @@ global $fields;
         };
 
         // Create marker instance.           
-        var icon = new google.maps.MarkerImage('../../src/img/svgs/icon.svg');
+        var icon = new google.maps.MarkerImage('/wp-content/themes/canberra/src/img/icon.png');
 
         var marker = new google.maps.Marker({
           position: latLng,

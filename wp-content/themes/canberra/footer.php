@@ -2,7 +2,9 @@
   <div class="container">
     <div class="grid-col-3">
       <div class="logo">
-        <?= get_svg('logo') ?>
+        <a href="<?= home_url() ?> ">
+          <?= get_svg('logo') ?>
+        </a>
       </div>
       <div class="menu-col">
         <h6>Company</h6>
