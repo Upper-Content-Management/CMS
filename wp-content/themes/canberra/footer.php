@@ -2,7 +2,7 @@
   <div class="container">
     <div class="grid-col-3">
       <div class="logo">
-        <img src="<?= get_img_url('logo.png') ?>">
+        <?= get_svg('logo') ?>
       </div>
       <div class="menu-col">
         <h6>Company</h6>

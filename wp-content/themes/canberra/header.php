@@ -16,8 +16,8 @@
   <header>
     <div id="nav-desktop">
       <div class="left">
-        <a href="<?= home_url() ?> ">
-          <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        <a href="<?= home_url() ?> " class="logo">
+          <?= get_svg('logo') ?>
         </a>
         <a href="<?= get_page_link(get_page_by_title('search')->ID); ?>">
           <?= get_svg('search') ?>
