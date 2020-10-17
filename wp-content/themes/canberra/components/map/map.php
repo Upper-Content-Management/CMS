@@ -171,8 +171,8 @@ $markericon = get_svg('icon');
     if( $image ):
         foreach( $image as $image ):          
             $image_src = $image['url'];
-            $image_alt = $image['alt']; ?>
-        <?php endforeach;
+            $image_alt = $image['alt'];
+        endforeach;
     endif;
     
     $links = get_sub_field('links');
@@ -191,7 +191,6 @@ $markericon = get_svg('icon');
     </tr>';
    
     endwhile; endif;
-   
     endwhile;
     else :
     
@@ -205,7 +204,7 @@ $markericon = get_svg('icon');
         <?php
         // for each house post, display the location as a marker on the map
         foreach( $output_map as $key => $map_marker ):
-        echo $map_marker['location'];
+            echo $map_marker['location'];
         endforeach;
         ?>
     </div>
@@ -220,7 +219,7 @@ $markericon = get_svg('icon');
         // for each house post, display the house data in a row in the table
         foreach( $output_table as $key => $house_data ):
             echo $house_data['row'];
-            endforeach; ?>
+        endforeach; ?>
                 
         </table>
     </div>
