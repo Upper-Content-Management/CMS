@@ -2,10 +2,11 @@
   <div class="container">
     <div class="grid-col-3">
       <div class="logo">
-        <img src="<?= get_img_url('logo.png') ?>">
+        <a href="<?= home_url() ?> ">
+          <?= get_svg('logo') ?>
+        </a>
       </div>
       <div class="menu-col">
-        <h6>Company</h6>
         <?php wp_nav_menu(array('echo' => true)); ?>
       </div>
       <div class="small-text">

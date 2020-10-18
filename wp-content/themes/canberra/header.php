@@ -8,13 +8,13 @@
   <link rel="profile" href="https://gmpg.org/xfn/11" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link rel="stylesheet" href="https://use.typekit.net/txd1pvb.css">
-    
+
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-    
+
   <?php wp_head(); ?>
 </head>
 
@@ -23,8 +23,8 @@
   <header>
     <div id="nav-desktop">
       <div class="left">
-        <a href="<?= home_url() ?> ">
-          <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        <a href="<?= home_url() ?> " class="logo">
+          <?= get_svg('logo') ?>
         </a>
         <a href="<?= get_page_link(get_page_by_title('search')->ID); ?>">
           <?= get_svg('search') ?>
@@ -40,8 +40,8 @@
     <div id="nav-mobile-placeholder"></div>
     <div id="nav-mobile">
       <div class="left">
-        <a href="<?= home_url() ?> ">
-          <img class="logo" src="<?= get_img_url('logo.png') ?>" alt="MCC">
+        <a href="<?= home_url() ?> " class="logo">
+          <?= get_svg('logo') ?>
         </a>
         <a href="<?= get_page_link(get_page_by_title('search')->ID); ?>">
           <?= get_svg('search') ?>
