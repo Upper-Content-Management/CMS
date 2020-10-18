@@ -95,10 +95,6 @@ add_filter('get_search_form', 'wp_search_form');
 function fb_move_admin_bar() {
   echo '
     <style type="text/css">
-    body { 
-    margin-top: -28px;
-    padding-bottom: 28px;
-    }
     body.admin-bar #wphead {
        padding-top: 0;
     }
@@ -108,6 +104,7 @@ function fb_move_admin_bar() {
     #wpadminbar {
         top: auto !important;
         bottom: 0;
+        position: fixed;
     }
     #wpadminbar .ab-sub-wrapper {
       bottom: 32px;
