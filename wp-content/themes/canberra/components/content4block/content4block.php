@@ -48,7 +48,8 @@ global $fields;
               </div>
             </div>
           </div>
-        <?php endforeach; ?>
+        </a>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

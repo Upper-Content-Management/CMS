@@ -7,7 +7,6 @@
         </a>
       </div>
       <div class="menu-col">
-        <h6>Company</h6>
         <?php wp_nav_menu(array('echo' => true)); ?>
       </div>
       <div class="small-text">
