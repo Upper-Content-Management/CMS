@@ -1,5 +1,14 @@
 #content4block {
   .container {
+    .gradient {
+      border-radius: 0px;
+      @include mq(l, max) {
+        opacity: 1;
+        h6 {
+          display: none;
+        }
+      }
+    }
     .toprow {
       display: flex;
       height: 500px;
