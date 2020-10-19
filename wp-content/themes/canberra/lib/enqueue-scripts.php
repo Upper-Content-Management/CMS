@@ -33,6 +33,7 @@ function create_custom_post_types() {
     'menu_icon' => 'dashicons-welcome-widgets-menus',
     'rewrite' => array('slug' => 'article'),
     'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+    'taxonomies'  => array('category'),
   ));
   register_post_type('house', array(
     'labels' => array(
@@ -46,6 +47,7 @@ function create_custom_post_types() {
     'menu_icon' => 'dashicons-admin-home',
     'rewrite' => array('slug' => 'house'),
     'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+    'taxonomies'  => array('category'),
   ));
   register_post_type('architect', array(
     'labels' => array(
@@ -59,6 +61,7 @@ function create_custom_post_types() {
     'menu_icon' => 'dashicons-businessperson',
     'rewrite' => array('slug' => 'architect'),
     'supports' => array('title', 'editor', 'thumbnail', 'comments'),
+    'taxonomies'  => array('category'),
   ));
 }
 function my_acf_init() {

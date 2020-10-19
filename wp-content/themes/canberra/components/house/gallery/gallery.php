@@ -9,6 +9,7 @@ $i = 0;
       <?php foreach ($fields['gallery'] as $gallery) : ?>
         <div id="slide-<?= $i; ?>">
           <img class="img" src="<?= $gallery['url'] ?>" alt="<?= $gallery['title'] ?>">
+          <div class="desc"><?= $gallery['caption'] ?></div>
           <?php $i++; ?>
         </div>
       <?php endforeach; ?>

@@ -21,17 +21,16 @@
 
     scroll-snap-points-x: repeat(300px);
     scroll-snap-type: mandatory;
-  }
-  .slides::-webkit-scrollbar {
-    height: 5px;
-  }
-  .slides::-webkit-scrollbar-thumb {
-    background: $alt-colour;
-  }
-  .slides::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .slides {
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $alt-colour;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
     div {
       scroll-snap-align: start;
       flex-shrink: 0;
@@ -55,6 +54,17 @@
         overflow: hidden;
         background-size: cover;
         background-position: center;
+      }
+      .desc {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        max-width: 50%;
+        height: 20%;
+        font-size: 20px;
+        background-color: rgba(43, 43, 43, 0.45);
+        color: $alt-colour;
+        border-radius: 0 5px 5px 0;
       }
     }
   }
