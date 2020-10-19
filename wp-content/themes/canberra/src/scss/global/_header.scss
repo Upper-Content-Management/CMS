@@ -28,7 +28,7 @@
       width: 120px;
     }
     a {
-      margin-right: 10px;
+      margin-right: 20px;
     }
     svg {
       path {
@@ -110,14 +110,17 @@
   z-index: 2;
   top: 0;
   padding-top: 65px;
-  right: -50vw;
-  width: 50vw;
+  right: -100vw;
+  width: 100vw;
   height: 100vh;
   transition: right 0.3s ease-in-out;
   background: $black;
   display: flex;
   &.open {
     right: 0;
+  }
+  .menu-header-container {
+    width: 100%;
   }
   .menu {
     flex-direction: column;
