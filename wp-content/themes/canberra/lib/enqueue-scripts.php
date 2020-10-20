@@ -118,3 +118,13 @@ function fb_move_admin_bar() {
 add_action('admin_head', 'fb_move_admin_bar');
 // on frontend area
 add_action('wp_head', 'fb_move_admin_bar');
+
+function custom_post_type_cat_filter($query) {
+  if (!is_admin() && $query->is_main_query()) {
+    if ($query->is_category()) {
+      $query->set('post_type', array('post', 'house', 'architect', 'article'));
+    }
+  }
+}
+
+add_action('pre_get_posts', 'custom_post_type_cat_filter');
