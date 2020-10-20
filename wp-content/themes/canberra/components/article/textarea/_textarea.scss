@@ -1,10 +1,5 @@
-.post_author,
 .post_date{
     display: inline-block;
-}
-
-.post_author span,
-.post_date{
     color: $alt-colour;
 }
 
@@ -30,7 +25,7 @@
     border: 1px solid $black;
 }
     
-.previous{
+.prev{
     float: left;
     margin-top: 20px;
 }
@@ -40,24 +35,24 @@
     margin-top: 20px;
 }
 
-.previous p,
+.prev p,
 .next p{
     vertical-align: middle;
     display: inline-block;
 }
 
-.previous a,
+.prev a,
 .next a{
     text-decoration: none;
     color: $black;
 }
 
-.previous a svg,
+.prev a svg,
 .next a svg{
     width: 20px;
 }
 
-.previous a:hover,
+.prev a:hover,
 .next a:hover{
     color: $alt-colour;
 }

@@ -3,8 +3,6 @@ global $fields;
 ?>
 <section id="textarea">
   <div class="container-small">
-      <p class="post_author">Posted by <span><?php the_author_posts_link(); ?></span></p>
-      &nbsp; | &nbsp;
       <p class="post_date"><?php the_time('j F Y'); ?></p>
       &nbsp; | &nbsp;
       <p class="cat"><?php the_category(' &nbsp; '); ?></p>
@@ -15,8 +13,8 @@ global $fields;
 
             <div class="prev">
                 <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
-                    <p>Previous news item &nbsp;</p>
                     <?= get_svg('prev'); ?>
+                    <p>Previous news item &nbsp;</p>
                 </a>
             </div>
 
