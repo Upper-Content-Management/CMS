@@ -45,7 +45,7 @@
 
     #house_list th,
     #house_list .row {
-      border-bottom: 1.5px solid #daa520;
+      border-bottom: 1.5px solid $alt-colour;
     }
 
     #house_list .row:hover {
@@ -64,7 +64,7 @@
 
     .house_name a {
       font-weight: bold;
-      color: #daa520;
+      color: $alt-colour;
     }
 
     #house_list td a,
@@ -115,7 +115,7 @@
         }
 
         #house_list td:first-of-type{
-            border-top: 1.5px solid #daa520;
+            border-top: 1.5px solid $alt-colour;
         }
 
         #house_image{
