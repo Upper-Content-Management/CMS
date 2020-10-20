@@ -26,8 +26,8 @@
     .categories .cat{
         text-transform: uppercase;
     }
-
-    .categories a{
+    
+    .categories .cat a{
         padding: 5px 7px;
         color: #666;
         text-decoration: none;
@@ -36,13 +36,13 @@
         border-radius: 3px;
     }
 
-    .categories a:hover{
+    .categories .cat a:hover{
         color: $black;
         background-color: $alt-colour;
         border: 1px solid $black;
     }
     
-    .previous{
+    .prev{
         float: left;
     }
     
@@ -50,24 +50,24 @@
         float: right;
     }
     
-    .previous p,
+    .prev p,
     .next p{
         vertical-align: middle;
         display: inline-block;
     }
     
-    .previous a,
+    .prev a,
     .next a{
         text-decoration: none;
         color: $black;
     }
     
-    .previous a svg,
+    .prev a svg,
     .next a svg{
         width: 20px;
     }
     
-    .previous a:hover,
+    .prev a:hover,
     .next a:hover{
         color: $alt-colour;
     }

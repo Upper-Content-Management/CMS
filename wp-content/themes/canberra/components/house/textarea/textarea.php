@@ -17,8 +17,8 @@ global $fields;
 
             <div class="prev">
                 <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
-                    <p>Previous house &nbsp;</p>
                     <?= get_svg('prev'); ?>
+                    <p>Previous house &nbsp;</p>
                 </a>
             </div>
 

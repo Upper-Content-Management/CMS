@@ -41,6 +41,10 @@
     float: right;
     margin-left: 10px;
   }
+    
+  .down-arrow ins p{
+      font-size: 1.4em;
+  }
 
   /*------- Contact Form 7 (about) -------*/
 
@@ -62,7 +66,7 @@
   }
 
   .wpcf7-submit {
-    padding: 0.5em 7em;
+    padding: 0.5em 4.5em;
     text-align: center;
     border-radius: 4px;
     border: none;
