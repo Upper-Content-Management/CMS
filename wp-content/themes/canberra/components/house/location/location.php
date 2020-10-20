@@ -63,14 +63,15 @@ global $fields;
         lng: parseFloat(lng)
       };
 
-      var icon = new google.maps.MarkerImage('/wp-content/themes/canberra/src/img/icon.png');
+      // Create marker instance.           
+        var icon = new google.maps.MarkerImage('/wp-content/themes/canberra/src/img/icon.png');
 
-      // Create marker instance.
-      var marker = new google.maps.Marker({
-        position: latLng,
-        icon: icon,
-        map: map
-      });
+        var marker = new google.maps.Marker({
+          position: latLng,
+          map: map,
+          icon: icon,
+          title: 'house location'
+        });
 
       // Append to reference for later use.
       map.markers.push(marker);
