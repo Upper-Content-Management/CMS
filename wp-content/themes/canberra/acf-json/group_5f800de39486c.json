@@ -171,11 +171,10 @@
         "slug",
         "author",
         "format",
-        "categories",
         "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
-    "modified": 1602633778
+    "modified": 1603083894
 }
