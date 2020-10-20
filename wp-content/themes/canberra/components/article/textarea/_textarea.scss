@@ -1,3 +1,63 @@
-.post_info{
+.post_author,
+.post_date{
+    display: inline-block;
+}
+
+.post_author span,
+.post_date{
+    color: $alt-colour;
+}
+
+.cat{
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.cat a{
+    padding: 5px 7px;
+    color: #666;
+    text-decoration: none;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.cat a:hover{
+    color: $black;
+    background-color: $alt-colour;
+    border: 1px solid $black;
+}
+    
+.previous{
+    float: left;
+    margin-top: 20px;
+}
+
+.next{
+    float: right;
+    margin-top: 20px;
+}
+
+.previous p,
+.next p{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.previous a,
+.next a{
+    text-decoration: none;
+    color: $black;
+}
+
+.previous a svg,
+.next a svg{
+    width: 20px;
+}
+
+.previous a:hover,
+.next a:hover{
     color: $alt-colour;
 }

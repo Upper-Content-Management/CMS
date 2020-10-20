@@ -10,4 +10,65 @@
   h2{
     font-size: 2rem;
   }
+
+    .categories{
+        margin-top: 30px;
+        padding: 10px 0;
+        border-top: 1px solid $alt-colour;
+    }
+
+    .categories .tag,
+    .categories .cat{
+        color: #666;
+        font-size: 0.9em;
+    }
+
+    .categories .cat{
+        text-transform: uppercase;
+    }
+
+    .categories a{
+        padding: 5px 7px;
+        color: #666;
+        text-decoration: none;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .categories a:hover{
+        color: $black;
+        background-color: $alt-colour;
+        border: 1px solid $black;
+    }
+    
+    .previous{
+        float: left;
+    }
+    
+    .next{
+        float: right;
+    }
+    
+    .previous p,
+    .next p{
+        vertical-align: middle;
+        display: inline-block;
+    }
+    
+    .previous a,
+    .next a{
+        text-decoration: none;
+        color: $black;
+    }
+    
+    .previous a svg,
+    .next a svg{
+        width: 20px;
+    }
+    
+    .previous a:hover,
+    .next a:hover{
+        color: $alt-colour;
+    }
 }
