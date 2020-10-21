@@ -44,29 +44,31 @@
     
     .prev{
         float: left;
+        margin-top: 20px;
     }
-    
+
     .next{
         float: right;
+        margin-top: 20px;
     }
-    
+
     .prev p,
     .next p{
         vertical-align: middle;
         display: inline-block;
     }
-    
+
     .prev a,
     .next a{
         text-decoration: none;
-        color: $black;
+        color: #999;
     }
-    
+
     .prev a svg,
     .next a svg{
         width: 20px;
     }
-    
+
     .prev a:hover,
     .next a:hover{
         color: $alt-colour;

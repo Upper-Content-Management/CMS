@@ -35,10 +35,12 @@ h2{
     
 .prev{
     float: left;
+    margin-top: 20px;
 }
 
 .next{
     float: right;
+    margin-top: 20px;
 }
 
 .prev p,
@@ -50,7 +52,7 @@ h2{
 .prev a,
 .next a{
     text-decoration: none;
-    color: $black;
+    color: #999;
 }
 
 .prev a svg,
