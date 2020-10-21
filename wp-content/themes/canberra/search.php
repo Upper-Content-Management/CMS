@@ -4,7 +4,7 @@ get_header();
 
 <section id="search">
   <div class="container-small">
-    <h3>Search Result for : <?php echo htmlentities($s, ENT_QUOTES, 'UTF-8'); ?> </h3>
+    <h3>Search result for: <?php echo htmlentities($s, ENT_QUOTES, 'UTF-8'); ?> </h3>
     <div class="grid-col-4">
       <?php
       if (have_posts()) : while (have_posts()) : the_post();

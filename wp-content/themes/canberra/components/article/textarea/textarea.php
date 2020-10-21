@@ -14,7 +14,7 @@ global $fields;
             <div class="prev">
                 <a href="<?php echo get_permalink( $prev_post->ID ); ?>">
                     <?= get_svg('prev'); ?>
-                    <p>Previous news item &nbsp;</p>
+                    <p>&nbsp; Previous news item</p>
                 </a>
             </div>
 
@@ -25,7 +25,7 @@ global $fields;
 
             <div class="next">
                 <a href="<?php echo get_permalink( $next_post->ID ); ?>">
-                    <p>Next news item  </p>
+                    <p>Next news item &nbsp;</p>
                     <?= get_svg('next'); ?>
                 </a>
             </div>
